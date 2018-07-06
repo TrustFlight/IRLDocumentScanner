@@ -168,6 +168,7 @@ NS_CLASS_AVAILABLE(NA, 8_0)
  */
 @property (readwrite, nonatomic)      BOOL                          showAutoFocusWhiteRectangle;
 
+@property (readwrite, nonatomic)      BOOL                          showScanButton;
 
 /**
  @brief This Button is for the flash of the camera

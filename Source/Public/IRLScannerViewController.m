@@ -94,6 +94,11 @@
     [self.cameraView setEnableShowAutoFocus:showAutoFocusWhiteRectangle];
 }
 
+- (void)setShowScanButton:(BOOL)showScanButton {
+    _showScanButton = showScanButton;
+    self.scan_button.hidden = !showScanButton;
+}
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
@@ -112,7 +117,7 @@
     }
     
     [self.cameraView setEnableBorderDetection:YES];
-    self.scan_button.hidden = YES;
+    self.scan_button.hidden = !self.showScanButton;
     self.auto_button.hidden = YES;
     
     [self.cameraView start];
